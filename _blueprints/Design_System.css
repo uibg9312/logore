@@ -1,0 +1,64 @@
+/* 
+  Material Design 3 - Logore AI Design System 
+  Variables, Tipografía y Espaciado
+*/
+:root {
+  /* Brand Colors - Modern, Professional, Trustworthy, AI-Driven */
+  --md-sys-color-primary: #4F46E5; /* Indigo 600 - Representa tecnología e IA */
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #E0E7FF;
+  --md-sys-color-on-primary-container: #312E81;
+  
+  --md-sys-color-secondary: #0EA5E9; /* Sky Blue - Accesibilidad y creatividad */
+  --md-sys-color-on-secondary: #FFFFFF;
+  --md-sys-color-secondary-container: #E0F2FE;
+  --md-sys-color-on-secondary-container: #0C4A6E;
+
+  --md-sys-color-tertiary: #10B981; /* Emerald - Feedback positivo, "Mejorado" */
+  --md-sys-color-on-tertiary: #FFFFFF;
+  --md-sys-color-tertiary-container: #D1FAE5;
+  --md-sys-color-on-tertiary-container: #064E3B;
+
+  --md-sys-color-background: #F8FAFC; /* Slate 50 - Fondo limpio para logos */
+  --md-sys-color-on-background: #0F172A; /* Slate 900 - Alta legibilidad */
+  --md-sys-color-surface: #FFFFFF;
+  --md-sys-color-on-surface: #1E293B;
+
+  --md-sys-color-error: #EF4444;
+  --md-sys-color-on-error: #FFFFFF;
+
+  /* Typography */
+  --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-family-display: 'Outfit', sans-serif;
+  
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  /* Animation Timings */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: var(--font-family-sans);
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-display);
+}

@@ -1,0 +1,13 @@
+graph TD
+    Client[Browser Frontend - Next.js App] -->|HTTPS| BFF[Next.js API Serverless Route]
+    Client -->|Local Processing| Canvas[Canvas API - FloodFill/Resize]
+    Client -->|Local Processing| SVG_Engine[ImageTracer.js - Vectorizer]
+    BFF -->|REST/HTTPS| Gemini[Google Gemini 2.5 Flash API]
+    BFF -->|REST/HTTPS| DB[(Firebase Firestore - Opcional Logs)]
+    Gemini -->|Returns JSON Audit| BFF
+    BFF -->|Returns Data| Client
+
+    %% Style definitions
+    style Client fill:#4F46E5,color:#fff;
+    style BFF fill:#0EA5E9,color:#fff;
+    style Gemini fill:#10B981,color:#fff;

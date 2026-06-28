@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
+@import "tailwindcss";
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Colors - Modern, Professional, Trustworthy, AI-Driven */
+  --md-sys-color-primary: #4F46E5;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #E0E7FF;
+  --md-sys-color-on-primary-container: #312E81;
+
+  --md-sys-color-secondary: #0EA5E9;
+  --md-sys-color-on-secondary: #FFFFFF;
+  --md-sys-color-secondary-container: #E0F2FE;
+  --md-sys-color-on-secondary-container: #0C4A6E;
+
+  --md-sys-color-tertiary: #10B981;
+  --md-sys-color-on-tertiary: #FFFFFF;
+  --md-sys-color-tertiary-container: #D1FAE5;
+  --md-sys-color-on-tertiary-container: #064E3B;
+
+  --md-sys-color-background: #F8FAFC;
+  --md-sys-color-on-background: #0F172A;
+  --md-sys-color-surface: #FFFFFF;
+  --md-sys-color-on-surface: #1E293B;
+
+  --md-sys-color-error: #EF4444;
+  --md-sys-color-on-error: #FFFFFF;
+
+  /* Animation Timings */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-primary: var(--md-sys-color-primary);
+  --color-primary-container: var(--md-sys-color-primary-container);
+  --color-secondary: var(--md-sys-color-secondary);
+  --color-tertiary: var(--md-sys-color-tertiary);
+  --color-background: var(--md-sys-color-background);
+  --color-surface: var(--md-sys-color-surface);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-outfit);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  @apply antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-outfit), sans-serif;
 }

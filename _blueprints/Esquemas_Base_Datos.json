@@ -1,0 +1,15 @@
+{
+  "_comment": "As Lean architecture, DB is optional and strictly for anonymized telemetry/logs if required. Using Firebase Firestore NoSQL.",
+  "collections": {
+    "usage_logs": {
+      "document_structure": {
+        "timestamp": "timestamp",
+        "action": "string (e.g., 'analysis_requested', 'svg_generated')",
+        "processing_time_ms": "integer",
+        "error_flag": "boolean",
+        "gemini_tokens_used": "integer"
+      },
+      "rules": "Strict write-only for clients, no PII stored."
+    }
+  }
+}
