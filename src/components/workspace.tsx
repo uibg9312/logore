@@ -210,10 +210,10 @@ export function Workspace() {
                                     SVG Vector
                                 </Button>
                                 <Button variant="outline" className="rounded-2xl gap-2" onClick={() => handleMonoExport('black')}>
-                                    <DownloadIcon size={16} /> Negro (PNGe)
+                                    <DownloadIcon size={16} /> Negro (PNG)
                                 </Button>
                                 <Button variant="outline" className="rounded-2xl gap-2" onClick={() => handleMonoExport('white')}>
-                                    <DownloadIcon size={16} /> Blanco (PNGe)
+                                    <DownloadIcon size={16} /> Blanco (PNG)
                                 </Button>
                                 <Button variant="default" className="rounded-2xl gap-2" onClick={() => downloadFile(processedCanvas!.toDataURL(), 'logo-clean.png', 'image/png')}>
                                     <DownloadIcon size={16} /> PNG Original

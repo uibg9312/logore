@@ -2,14 +2,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import { geminiImageModel } from '@/lib/gemini';
 
 /**
- * Note: Gemini 1.5 Flash supports image-to-text, 
- * for "image generation" style variations, we use it to generate SVG paths or detailed descriptions 
- * that the client can use to show "suggestions".
- * If the user expects a pixel-perfect new image, we'd typically use Imagen 3 on Vertex AI, 
- * but staying within Gemini 1.5 Flash capabilities, we generate text-based redesign descriptions.
- * 
- * However, the user request mentioned "Gemini 2.5 Flash Image" (which implies high-end generative capabilities).
- * I will implement a bridge that generates a prompt for a redesign or a simulated data response.
+ * Generates conceptual redesign variations for an uploaded logo.
+ *
+ * Note: this endpoint returns *text-based* creative directions (concept name,
+ * visual description and rationale) produced by Gemini, not rasterized images.
+ * Each variation's `visualDescription` is intended to be used as a prompt for a
+ * downstream image-generation model.
  */
 
 export async function POST(req: NextRequest) {
